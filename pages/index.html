@@ -1,40 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PavelVNazarov | Персональный сайт</title>
-    <link rel="stylesheet" href="/styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PavelVNazarov | Персональный сайт</title>
+  <link rel="stylesheet" href="bootstrap.css">
+  <style>
+    /* Кастомные стили */
+    .hero-section {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      padding: 5rem 0;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .about-card, .project-card {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+      margin-bottom: 2rem;
+    }
+    footer {
+      background: #343a40;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>Привет! Я Павел Назаров</h1>
-            <p>Python-разработчик</p>
+  <div class="container">
+    <!-- Герой-секция -->
+    <div class="hero-section">
+      <h1>Привет! Я Павел Назаров</h1>
+      <p class="lead">Python-разработчик</p>
+    </div>
+    
+    <!-- Обо мне -->
+    <div class="about-card">
+      <h2>Обо мне</h2>
+      <p>Разрабатываю backend-решения на Python с 2020 года. Специализируюсь на:</p>
+      <ul>
+        <li>Веб-приложениях (Django/Flask)</li>
+        <li>Парсинге и анализе данных</li>
+        <li>Создании программ для учебы и работы</li>
+      </ul>
+    </div>
+    
+    <!-- Проекты -->
+    <div class="project-card">
+      <h2>Мои проекты</h2>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Chemical Book</h5>
+          <p class="card-text">Имитация управления химической установкой</p>
+          <a href="https://github.com/PavelVNazarov/chemical_bookc" class="btn btn-primary">GitHub проекта</a>
         </div>
-    </header>
-
-    <section class="about">
-        <h2>Обо мне</h2>
-        <p>Разрабатываю backend-решения на Python с 2020 года. Специализируюсь на:</p>
-        <ul>
-            <li>Веб-приложениях (Django/Flask)</li>
-            <li>Парсинге и анализе данных</li>
-            <li>Разработке интерактивных обучающих программ</li>
-        </ul>
-    </section>
-
-    <section class="projects">
-        <h2>Мои проекты</h2>
-        <div class="project-card">
-            <h3>RadarSimulator</h3>
-            <p>Симулятор работы радара/p>
-            <a href="https://github.com/PavelVNazarov/radar_simulator →</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 PavelVNazarov | Контакты: 19pavel76@mail.ru</p>
-    </footer>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Футер -->
+  <footer>
+    <div class="container">
+      <p>© 2025 PavelVNazarov | Контакты:19pavel76@mail.ru</p>
+      <p>Мой GitHub: <a href="https://github.com/PavelVNazarov" style="color: #80bdff;">https://github.com/PavelVNazarov</a></p>
+    </div>
+  </footer>
 </body>
 </html>
