@@ -1,22 +1,12 @@
 name: Greetings
-on: [issues]
-
+on:
+  issues:
+    types: [opened]
 jobs:
   greeting:
     runs-on: ubuntu-latest
     steps:
-      - name: Greet issue author
-        uses: actions/github-script@v6
+      - uses: actions/first-interaction@v1
         with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: "🎉 Welcome to the project, @${{ github.event.issue.user.login }}! Thank you for your contribution! 🚀"
-            })
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: "Привет, @${{ github.actor }}! Спасибо за твой первый issue! ✨"
